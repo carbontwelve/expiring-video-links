@@ -1,0 +1,13 @@
+{
+    "name": "photogabble/expiring-video-links",
+    "description": "A tiny web app that provides signed/expiring video links",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon Dann",
+            "email": "simon.dann@gmail.com"
+        }
+    ],
+    "require": {}
+}
