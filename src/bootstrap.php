@@ -6,6 +6,7 @@ if(! defined('APP_ROOT')) {
 
 include APP_ROOT . '/vendor/autoload.php';
 
+
 $app = new \Photogabble\Tuppence\App();
 
 try {

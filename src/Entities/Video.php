@@ -130,4 +130,18 @@ class Video
     {
         $this->maxWatches = $maxWatches;
     }
+
+    /**
+     * @return string
+     */
+    public function getCode(): string
+    {
+        return $this->code;
+    }
+
+
+    public function incrementWatches(): void
+    {
+        $this->watches++;
+    }
 }

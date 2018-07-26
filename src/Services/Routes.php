@@ -35,6 +35,7 @@ class Routes extends AbstractServiceProvider implements BootableServiceProviderI
         $app = $this->getContainer()->get(App::class);
 
         $app->get('/', '\App\Http\Controllers\PageController::index');
-        $app->post('/new', '\App\Http\Controllers\ApiController::postNew');
+        $app->post('/watch', '\App\Http\Controllers\PageController::watch');
+        $app->get('/stream/{signature}', '\App\Http\Controllers\PageController::stream');
     }
 }

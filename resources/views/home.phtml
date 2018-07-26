@@ -1,15 +1,14 @@
 <?php
 /**
- * @var string $title
  * @var string $code
  * @var bool|string $error
  */
-$this->layout('_layouts/default', ['title' => $title]);
+$this->layout('_layouts/default', ['title' => 'Please enter a code...']);
 ?>
 
 <div class="container mx-auto text-center flex" style="align-items: center; justify-content: center; height: 100vh; width: 100vw;">
     <div class="w-full max-w-xs">
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form action="/watch" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="code">
                     Code
