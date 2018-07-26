@@ -1,0 +1,32 @@
+<?php
+/**
+ * @var string $title
+ * @var string $code
+ * @var bool|string $error
+ */
+$this->layout('_layouts/default', ['title' => $title]);
+?>
+
+<div class="container mx-auto text-center flex" style="align-items: center; justify-content: center; height: 100vh; width: 100vw;">
+    <div class="w-full max-w-xs">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="code">
+                    Code
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight <?= $error !== false ? 'border-red mb-3' : '' ?>" id="code" name="code" type="text" value="<?= $code ?>">
+                <?php if ($error !== false) { ?>
+                    <p class="text-red text-xs italic"><?= $error ?></p>
+                <?php } ?>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+        <p class="text-center text-grey text-xs">
+            &copy;<?= date('Y'); ?> Acme Corp. All rights reserved.
+        </p>
+    </div>
+</div>
